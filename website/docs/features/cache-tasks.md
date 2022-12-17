@@ -1,29 +1,26 @@
 ---
 id: cache-tasks
-title: Cache Task Results
+title: 缓存任务结果
 type: recipe
 ---
 
-# Cache Task Results
+# 缓存任务结果
 
-> When it comes to running tasks, caching etc., Lerna and Nx can be used interchangeably. When we say "Lerna can cache
-> builds", we mean that Lerna uses Nx which can cache builds.
+> 当涉及到运行任务，缓存等，Lerna和Nx可以互换使用。当我们说“Lerna可以缓存构建”时，我们的意思是Lerna使用了可以缓存构建的Nx。
 
-It's costly to rebuild and retest the same code over and over again. Lerna uses a computation cache to never rebuild the
-same code twice.
+一遍又一遍地重新构建和重新测试相同的代码成本很高。Lerna使用计算缓存来避免两次重新构建相同的代码。
 
-## Setup
+## 起步
 
-Lerna via Nx has the most sophisticated and battle-tested computation caching system. It knows when the task you are
-about to run has been executed before, so it can use the cache to restore the results of running that task.
+Lerna via Nx拥有最复杂和经过实战考验的计算缓存系统。它知道您将要运行的任务之前何时已经执行过，因此它可以使用缓存来恢复运行该任务的结果。
 
 :::tip
 
-If you don't have `nx.json`, run `npx lerna add-caching`.
+如果你没有 `nx.json`, 运行 `npx lerna add-caching`.
 
 :::
 
-To enable caching for `build` and `test`, edit the `cacheableOperations` property in `nx.json` to include the `build` and `test` tasks:
+要为 `build`和`test`启用缓存，请编辑 `nx.json`中的`cacheableOperations`属性,来包含`build`和 `test`任务:
 
 ```json title="nx.json"
 {
@@ -40,13 +37,11 @@ To enable caching for `build` and `test`, edit the `cacheableOperations` propert
 
 :::info
 
-Note, `cacheableOperations` need to be side effect free, meaning that given the same input they should always result in
-the same output. As an example, e2e test runs that hit the backend API cannot be cached as the backend might influence
-the result of the test run.
+注意，`cacheableOperations`需要没有副作用，这意味着给定相同的输入，它们应该总是产生相同的输出。例如，无法缓存命中后端API的端到端测试运行，因为后端可能会影响测试运行的结果。
 
 :::
 
-Now, run the following command twice. The second time the operation will be instant:
+现在，运行以下命令两次。第二次操作将立即执行:
 
 ```bash
 lerna run build --scope=header
@@ -71,24 +66,23 @@ created dist in 858ms
    Nx read the output from the cache instead of running the command for 1 out of 1 tasks.
 ```
 
-## Replaying from Cache
+## 从缓存中回复
 
-When Lerna determines that the inputs for a task have not changed, it recreates the outputs of that task as if it actually ran on your machine - but much faster. The outputs of a cached task include both the terminal output and the files created in the defined `output` directories for that task.
+当Lerna确定某个任务的输入没有改变时，它会重新创建该任务的输出，就像它实际在您的机器上运行一样——但是速度要快得多。缓存任务的输出包括终端输出和在为该任务定义的`output`目录中创建的文件。
 
-You can test this out by deleting the `dist` folder that the `header:build` task outputs to and then running `lerna run build --scope=header` again. The cached task will replay instantly and the correct files will be present in the `dist` folder.
+你可以通过删除`header:build`任务输出到的 `dist`文件夹来测试，然后再次运行`lerna run build --scope=header`。缓存的任务将立即重放，正确的文件将出现在`dist`文件夹中。
 
 ```treeview
 header/
 └── dist/  <-- this folder gets recreated
 ```
 
-If your task creates output artifacts in a different location, you can [change the output folder(s)](https://nx.dev/reference/project-configuration#outputs) that are cached. You can also [customize which inputs](https://nx.dev/more-concepts/customizing-inputs) will invalidate the cache if they are changed.
+如果您的任务在不同的位置创建输出工件，您可以[更改缓存的输出文件夹](https://nx.dev/reference/project-configuration#outputs)。您还可以自定义如果[更改了哪些输入](https://nx.dev/more-concepts/customizing-inputs)将使缓存失效。
 
-## Advanced Caching
+## 高级高速缓存
 
-For a more in-depth understanding of the caching implementation and to fine-tune the caching for your repo, read [How Caching Works](../concepts/how-caching-works).
+要更深入地了解缓存实现，并为您的repo微调缓存，请阅读[如何缓存工作](../concepts/how-caching-works)。
 
-## Local Computation Caching
+## 本地计算缓存
 
-By default, Lerna (via Nx) uses a local computation cache. Nx stores the cached values only for a week, after which they
-are deleted. To clear the cache run `nx reset`, and Nx will create a new one the next time it tries to access it.
+默认情况下，Lerna(通过Nx)使用本地计算缓存。Nx仅将缓存值存储一周，之后将删除它们。要清除缓存，请运行`nx reset`, nx将在下次尝试访问缓存时创建一个新的缓存。
