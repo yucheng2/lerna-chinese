@@ -10,27 +10,19 @@ import Link from '@docusaurus/Link';
 
 
 export default function Home(): JSX.Element {
-  // const { siteConfig } = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
-    // <Layout
-    //   title="Documentation"
-    //   description="Lerna is a fast modern build system for managing and publishing multiple JavaScript/TypeScript packages from the same repository."
-    // >
-    //   <main>
-    //     <HeroLerna />
-    //     <ProjectsUsingLerna />
-    //     <PoweredByNx />
-    //     <PublishWithLerna />
-    //     <AboutLerna />
-    //   </main>
-    // </Layout>
-    <button>
-      <Link
-        className="button button--secondary button--lg"
-        to="/docs/intro">
-        index
-      </Link>
-
-    </button>
+    <Layout
+      title="Documentation"
+      description="Lerna is a fast modern build system for managing and publishing multiple JavaScript/TypeScript packages from the same repository."
+    >
+      <main>
+        <HeroLerna />
+        <ProjectsUsingLerna />
+        <PoweredByNx />
+        <PublishWithLerna />
+        <AboutLerna />
+      </main>
+    </Layout>
   );
 }
