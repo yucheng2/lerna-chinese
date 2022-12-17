@@ -6,21 +6,31 @@ import ProjectsUsingLerna from "@site/src/components/projects-using-lerna";
 import PublishWithLerna from "@site/src/components/publish-with-lerna";
 import PoweredByNx from "@site/src/components/powered-by-nx";
 import AboutLerna from "@site/src/components/about-lerna";
+import Link from '@docusaurus/Link';
+
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+  // const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title="Documentation"
-      description="Lerna is a fast modern build system for managing and publishing multiple JavaScript/TypeScript packages from the same repository."
-    >
-      <main>
-        <HeroLerna />
-        <ProjectsUsingLerna />
-        <PoweredByNx />
-        <PublishWithLerna />
-        <AboutLerna />
-      </main>
-    </Layout>
+    // <Layout
+    //   title="Documentation"
+    //   description="Lerna is a fast modern build system for managing and publishing multiple JavaScript/TypeScript packages from the same repository."
+    // >
+    //   <main>
+    //     <HeroLerna />
+    //     <ProjectsUsingLerna />
+    //     <PoweredByNx />
+    //     <PublishWithLerna />
+    //     <AboutLerna />
+    //   </main>
+    // </Layout>
+    <button>
+      <Link
+        className="button button--secondary button--lg"
+        to="/docs/intro">
+        index
+      </Link>
+
+    </button>
   );
 }

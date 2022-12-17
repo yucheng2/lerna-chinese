@@ -21,8 +21,8 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "zh-cn",
+    locales: ['zh-cn']
   },
 
   plugins: [],
@@ -138,6 +138,10 @@ const config = {
           //   title: "Check Nrwl",
           //   label: "Nrwl",
           // },
+          {
+            type: 'localeDropdown',
+            position: "right",
+          },
           {
             href: "https://github.com/lerna/lerna",
             className: "header-github-link",
