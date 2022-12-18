@@ -8,14 +8,14 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Lerna",
   tagline: "Original Monorepo Tool",
-  url: "https://lerna.js.org",
+  url: "https://yucheng2.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "images/favicon.ico",
-  organizationName: "lerna",
-  projectName: "website",
-  deploymentBranch: "master",
+  organizationName: "yucheng2",
+  projectName: "yucheng2.github.io/lerna-chinese",
+  deploymentBranch: "gh-pages",
   trailingSlash: false,
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
