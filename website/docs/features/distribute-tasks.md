@@ -1,10 +1,10 @@
 ---
 id: distribute-tasks
-title: Distribute Task Execution
+title: 分布式任务执行
 type: recipe
 ---
 
-# Distribute Task Execution (DTE)
+# 分布式任务执行(DTE)
 
 Lerna speeds up your average CI time with [caching](/docs/features/cache-tasks) and the `--since` flag. But neither of these features help with the worst case scenario. When something at the core of your repo has been modified and every task needs to be run in CI, the only way to improve the performance is by adding more agent jobs and efficiently parallelizing the tasks.
 

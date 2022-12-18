@@ -23,7 +23,7 @@ const sidebars = {
     "lerna-and-nx",
     {
       type: "category",
-      label: "Features",
+      label: "特性",
       items: [
         "features/run-tasks",
         "features/cache-tasks",
@@ -43,7 +43,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Concepts",
+      label: "概念",
       items: [
         "concepts/task-pipeline-configuration",
         "concepts/how-caching-works",
@@ -66,7 +66,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "API Reference",
+      label: "API参考",
       items: ["api-reference/commands", "api-reference/configuration"],
     },
     "faq",

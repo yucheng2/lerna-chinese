@@ -1,10 +1,10 @@
 ---
 id: editor-integrations
-title: Editor Integrations
+title: 编辑器集成
 type: recipe
 ---
 
-# Editor Integrations
+# 编辑器集成
 
 Nx Console displays the npm scripts for all your projects in the VS Code sidebar and allows you to run them with a single click or open the script definition in your editor.
 

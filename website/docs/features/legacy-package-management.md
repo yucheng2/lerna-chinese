@@ -1,10 +1,10 @@
 ---
 id: legacy-package-management
-title: Legacy Package Management
+title: 遗留包管理
 type: recipe
 ---
 
-# Legacy Package Management
+# 遗留包管理
 
 ## Background
 

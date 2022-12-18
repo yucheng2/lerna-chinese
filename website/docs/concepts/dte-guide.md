@@ -1,10 +1,10 @@
 ---
 id: dte-guide
-title: Distributed Task Execution Guide
+title: 分布式任务执行指南
 type: explainer
 ---
 
-# Distributed Task Execution Guide
+# 分布式任务执行指南
 
 The illustrations in this guide are created by Nrwlian [Nicole Oliver](https://twitter.com/nixcodes)
 

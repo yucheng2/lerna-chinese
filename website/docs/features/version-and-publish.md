@@ -1,10 +1,10 @@
 ---
 id: version-and-publish
-title: Version and Publish
+title: Version 和 Publish
 type: explainer
 ---
 
-# Version and Publish
+# Version 和 Publish
 
 Lerna can increment your package's versions as well as publish your packages to NPM, and it provides a variety of options to make sure any workflow can be accommodated.
 

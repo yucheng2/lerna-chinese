@@ -6,12 +6,9 @@ type: recipe
 
 # 分享你的缓存
 
-The computation cache provided by Lerna can be distributed across multiple machines. You can either build an implementation
-of the cache or use Nx Cloud. Nx Cloud is an app that provides a fast and zero-config implementation of distributed
-caching. It's completely free for OSS projects and for most closed-sourced
-projects ([read more here](https://dev.to/nrwl/more-time-saved-for-free-with-nx-cloud-4a2j)).
+Lerna提供的计算缓存可以分布在多台机器上。您可以构建缓存的实现，也可以使用Nx Cloud。Nx Cloud是一款提供快速和零配置分布式缓存实现的应用程序。它对于OSS项目和大多数闭源项目是完全免费的([阅读更多](https://dev.to/nrwl/more-time-saved-for-free-with-nx-cloud-4a2j))。
 
-You can connect your workspace to Nx Cloud by running:
+你可以通过以下命令将你的工作空间连接到Nx Cloud:
 
 ```bash
 npx nx connect-to-nx-cloud
@@ -35,7 +32,7 @@ UPDATE nx.json
    https://cloud.nx.app/orgs/workspace-setup?accessToken=YOURACCESSTOKEN
 ```
 
-To see the remote cache in action, run:
+要查看远程缓存的运行情况，运行:
 
 ```bash
 lerna run build --scope=header && nx reset && lerna run build --scope=header
@@ -87,9 +84,9 @@ created dist in 786ms
    Nx Cloud made it possible to reuse header: https://nx.app/runs/P0X6ZGTkqZ
 ```
 
-## Connecting Your Workspace to Your Nx Cloud Account
+## 将您的工作区连接到您的Nx Cloud帐户
 
-After you have enabled Nx Cloud in your workspace, you will see the following:
+在您的工作空间中启用Nx Cloud后，您将看到以下内容:
 
 ```shell
 >  NX   NOTE  Nx Cloud has been enabled
@@ -102,18 +99,16 @@ After you have enabled Nx Cloud in your workspace, you will see the following:
   (You can do this later.)
 ```
 
-Click on this link to associate the workspace with your Nx Cloud account. If you don't have an Nx Cloud account, you can
-create one on the spot.
+单击此链接将工作区与您的Nx Cloud帐户关联。如果你没有Nx Cloud帐户，你可以当场创建一个。
 
-After you claim your workspace, you will be able to manage permissions, create access tokens, set up billing, and so
-forth.
+在您声明您的工作空间之后，您将能够管理权限、创建访问令牌、设置计费等等。
 
-**You will also see an interactive tutorial helping you explore distributed caching and the Nx Cloud user interface.**
+**您还将看到一个交互式教程，帮助您探索分布式缓存和Nx Cloud用户界面。**
 
-If you lose this link, you can still connect your workspace to Nx Cloud. Go to [nx.app](https://nx.app), create an
-account, and connect your workspace using the access token from `nx.json`.
+如果您失去了这个链接，您仍然可以将您的工作区连接到Nx Cloud。转到[nx.app](https://nx.app)，创建一个帐户，并使用访问令牌从 `nx.json`连接你的工作空间。
 
-## Skipping Cloud
+## 跳过云
 
 Similar to how `--skip-nx-cache` will instruct Nx not to use the cache, passing `--no-cloud` will tell Nx not to use Nx
 Cloud.
+类似于`--skip-nx-cache`将指示Nx不要使用缓存，`--no-cloud`将告诉Nx不要使用Nx Cloud。

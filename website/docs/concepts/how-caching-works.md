@@ -1,10 +1,10 @@
 ---
 id: how-caching-works
-title: How Caching Works
+title: 缓存的工作原理
 type: explainer
 ---
 
-# How Caching Works
+# 缓存的工作原理
 
 Before running any task, Lerna computes its computation hash. As long as the computation hash is the same, the output of
 running the task is the same.

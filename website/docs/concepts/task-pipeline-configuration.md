@@ -1,10 +1,10 @@
 ---
 id: task-pipeline-configuration
-title: Task Pipeline Configuration
+title: 任务管道配置
 type: explainer
 ---
 
-# Task Pipeline Configuration
+# 任务管道配置
 
 Lerna delegates the running of npm scripts (forking processes etc) to Nx. The `nx.json` file is the place where you can
 configure how Nx does it.

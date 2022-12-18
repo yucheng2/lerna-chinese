@@ -1,6 +1,6 @@
 ---
 id: alternate-bootstrapping-methods
-title: "Legacy: Alternate Bootstrapping Methods"
+title: "Legacy: Alternate Bootstrapping Methods" 
 type: explainer
 ---
 

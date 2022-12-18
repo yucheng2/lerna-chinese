@@ -1,29 +1,25 @@
 ---
 id: configuration
-title: Configuration
+title: 配置
 type: reference
 ---
 
-# Configuration
+# 配置
 
-Lerna's configuration is split into two files: `lerna.json` and `nx.json`.
+Lerna的配置被分成两个文件:`lerna.json` 和 `nx.json`.
 
 # Lerna.json
 
 ### useWorkspaces & packages
 
-Since Lerna was created, all major package managers (npm, yarn, and pnpm) have added the ability to cross-link packages
-in the same repo and dedupe node modules. If you'd like Lerna to delegate this process to the package manager you use,
-set `useWorkspaces: true` in `lerna.json`.
+自从Lerna创建以来，所有主要的包管理器(npm、yarn和pnpm)都添加了在相同的repo和dedupe节点模块中交叉链接包的功能。如果你想让Lerna把这个过程委托给你使用的包管理器，在`lerna.json`中设置 `useWorkspaces: true`.
 
 ```json title="lerna.json"
 {
   "useWorkspaces": true
 }
 ```
-
-If you don't have `useWorkspaces` set to true, you need to set the `packages` property which will tell Lerna where to
-look for `package.json` files.
+如果没有将 `useWorkspaces`设置为`true`，则需要设置`packages`属性，该属性将告诉Lerna在哪里查找`package.json`文件。
 
 ```json title="lerna.json"
 {
@@ -33,8 +29,7 @@ look for `package.json` files.
 
 ### version
 
-Lerna has two modes of publishing packages: `fixed` and `independent`. When using the fixed mode, all the packages will
-be published using the same version. The last published version is recorded in `lerna.json` as follows:
+Lerna有两种发布包的模式:`fixed` 和 `independent`。当使用`fixed`模式时，所有的包都将使用相同的版本发布。最后出版的版本记录在 `lerna.json`, 格式如下:
 
 ```json title="lerna.json"
 {
@@ -42,7 +37,7 @@ be published using the same version. The last published version is recorded in `
 }
 ```
 
-When using the independent mode, every package is versioned separately, and `lerna.json` will look as follows:
+当使用 `independent`模式时，每个包都是单独的版本，并且 `lerna.json`将如下所示:
 
 ```json title="lerna.json"
 {
@@ -52,7 +47,7 @@ When using the independent mode, every package is versioned separately, and `ler
 
 ### commands
 
-The `lerna.json` files can also encode commands options, as follows:
+`lerna.json`文件也可以编码命令选项，如下所示:
 
 ```json
 {
@@ -65,11 +60,11 @@ The `lerna.json` files can also encode commands options, as follows:
 }
 ```
 
-Find the available options in [the API docs](/docs/api-reference/commands).
+在[API文档](/docs/api-reference/commands)中找到可用的选项。
 
 # Nx.json
 
-> NOTE: "{projectRoot}" and "{workspaceRoot}" are special syntax supported by the task-runner, which will be appropriately interpolated internally when the command runs. You should therefore not replace "{projectRoot}" or "{workspaceRoot}" with fixed paths as this makes your configuration less flexible.
+> NOTE:“{projectRoot}”和“{workspaceRoot}”是任务运行器支持的特殊语法，当命令运行时，它们将在内部适当地插入。因此，您不应该将“{projectRoot}”或“{workspaceRoot}”替换为固定路径，因为这会降低配置的灵活性。
 
 ```json title="nx.json"
 {
@@ -102,31 +97,27 @@ Find the available options in [the API docs](/docs/api-reference/commands).
 
 ### runner
 
-Everything in Nx is customizable, including running npm scripts. Most of the time you will either use the default runner
-or the `@nrwl/nx-cloud` runner.
+Nx中的所有东西都是可定制的，包括运行npm脚本。大多数情况下，您将使用默认的运行程序或`@nrwl/nx-cloud`运行程序。
 
 ### cacheableOperations
 
 The `cacheableOperations` array defines the list of npm scripts/operations that are cached by Nx. In most repos all
 non-long running tasks (i.e., not `serve`) should be cacheable.
+`cacheableOperations`数组定义了Nx缓存的npm脚本/操作列表。在大多数repos中，所有非长时间运行的任务(i.e., not `serve`)都应该是可缓存的。
 
 ## Target Defaults
 
-Targets are npm script names. You can add metadata associated with say the build script of each project in the repo in
-the `targetDefaults` section.
+Targets是npm脚本名称。您可以在`targetDefaults`部分的repo中添加与每个项目的构建脚本相关的元数据。
 
 ### dependsOn
 
-Targets can depend on other targets. A common scenario is having to build dependencies of a project first before
-building the project. The `dependsOn` property can be used to define the dependencies of an individual target.
+目标可以依赖于其他目标。一个常见的场景是在构建项目之前必须首先构建项目的依赖项。`dependsOn`属性可用于定义单个目标的依赖关系。
 
-`"dependsOn": [ "prebuild", "^build"]` tells Nx that every build script requires the prebuild script of the same
-project and the build script of all the dependencies to run first.
+`"dependsOn": [ "prebuild", "^build"]` 告诉Nx每个`build`脚本都需要同一项目的`prebuild`脚本和所有依赖项的`build`脚本首先运行。
 
 ### inputs & namedInputs
 
-The `inputs` array tells Nx what to consider to determine whether a particular invocation of a script should be a cache
-hit or not. There are three types of inputs:
+`inputs`数组告诉Nx考虑什么来确定某个脚本的特定调用是否应该是缓存命中。有三种类型的输入:
 
 _Filesets_
 
@@ -143,7 +134,7 @@ Examples:
 
 - `{runtime: "node -v"}`
 
-Node the result value is hashed, so it is never displayed.
+节点的结果值是散列的，因此它永远不会显示
 
 _Env Variables_
 
@@ -151,7 +142,7 @@ Examples:
 
 - `{env: "MY_ENV_VAR"}`
 
-Node the result value is hashed, so it is never displayed.
+节点的结果值是散列的，因此它永远不会显示。
 
 _Named Inputs_
 
@@ -163,8 +154,9 @@ Examples:
 Often the same glob will appear in many places (e.g., prod fileset will exclude spec files for all projects).. Because
 keeping them in sync is error-prone, we recommend defining named inputs, which you can then reference in all of those
 places.
+通常相同的glob会出现在很多地方(例如，prod fileset将排除所有项目的规范文件)。因为保持它们同步很容易出错，所以我们建议定义命名输入，这样就可以在所有这些地方引用它们。
 
-#### Using ^
+#### 使用 ^
 
 Examples:
 

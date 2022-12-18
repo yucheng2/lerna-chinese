@@ -1,4 +1,4 @@
-# Using pnpm with Lerna
+# Lerna中使用pnpm
 
 Lerna can be used in a [`pnpm` workspace](https://pnpm.io/workspaces) to get the full benefits of both [`pnpm`](https://pnpm.io) and Lerna.
 

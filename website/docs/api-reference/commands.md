@@ -1,10 +1,10 @@
 ---
 id: commands
-title: Commands
+title: 命令
 type: reference
 ---
 
-# Commands
+# 命令
 
 - [`lerna publish`](https://github.com/lerna/lerna/tree/main/commands/publish#readme)
 - [`lerna version`](https://github.com/lerna/lerna/tree/main/commands/version#readme)
@@ -24,6 +24,6 @@ type: reference
 - [`lerna add-caching`](https://github.com/lerna/lerna/tree/main/core/lerna/commands/add-caching#readme)
 - [`lerna repair`](https://github.com/lerna/lerna/tree/main/core/lerna/commands/repair#readme)
 
-## Filter Options
+## 过滤选项
 
-Lerna commands can have filter options applied to control which packages they operate on.  Read more [here](https://github.com/lerna/lerna/tree/main/core/filter-options#readme)
+Lerna命令可以应用筛选选项来控制它们操作的包。[点击这里](https://github.com/lerna/lerna/tree/main/core/filter-options#readme)阅读更多
