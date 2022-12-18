@@ -1,10 +1,10 @@
 ---
 id: share-your-cache
-title: Share Your Cache
+title: 分享你的缓存
 type: recipe
 ---
 
-# Share Your Cache
+# 分享你的缓存
 
 The computation cache provided by Lerna can be distributed across multiple machines. You can either build an implementation
 of the cache or use Nx Cloud. Nx Cloud is an app that provides a fast and zero-config implementation of distributed
