@@ -20,15 +20,15 @@ nx graph
 2. 使用搜索栏查找名称包含特定字符串的所有项目。
 3. 在侧栏中手动隐藏或显示项目
 
-Once the graph is displayed, you can click on an individual dependency link to find out what specific file(s) created that dependency.
+一旦图形显示出来，您可以单击单个依赖项链接，以找出创建该依赖项的特定文件。
 
 
-## JSON Project Graph
+## JSON项目图
 
-If you prefer to analyze the underlying data of the project graph with a script or some other tool, you can run:
+如果你喜欢用脚本或其他工具分析项目图的底层数据，你可以运行:
 
 ```bash
 nx graph --file=output.json
 ```
 
-This will give you all the information that is used to create the project graph visualization.
+这将为您提供用于创建项目图形可视化的所有信息。

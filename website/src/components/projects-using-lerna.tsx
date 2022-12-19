@@ -128,7 +128,7 @@ export default function ProjectUsingLerna(): JSX.Element {
   return (
     <div className="padding-vert--xl container">
       <p className="margin-bottom--md" style={{ textAlign: "center" }}>
-        Thousands of teams worldwide are using Lerna
+        全世界有数千个团队正在使用Lerna
       </p>
       <div className="row">
         {projects.map((p) => (

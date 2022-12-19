@@ -9,13 +9,10 @@ export default function ModernLerna(): JSX.Element {
         <div className="col col--6">
           <div>
             <h1 className={clsx("margin-bottom--lg", styles.hero__title)}>
-              What is <br /> Modern Lerna?
+              What is <br/> Modern Lerna?
             </h1>
             <p className={clsx("margin-bottom--md", styles.hero__text)}>
-              Lerna is now faster, more reliable, and more powerful than ever. The "new Lerna" comes with
-              modern features such as local & remote caching support, task pipelines, improved terminal
-              output, Prettier & NPM/Yarn/PNPM workspaces support combined with what the community already
-              loved: a built-in versioning and publishing workflow.
+              Lerna现在比以前更快，更可靠，更强大。“新Lerna”具有现代功能，如本地和远程缓存支持，任务管道，改进的终端输出，更漂亮和NPM,Yarn,PNPM工作区支持，并结合了社区已经喜爱的功能:内置版本控制和发布工作流。
             </p>
           </div>
         </div>

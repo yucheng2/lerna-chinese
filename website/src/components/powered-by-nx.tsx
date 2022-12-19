@@ -19,15 +19,13 @@ export default function PoweredByNx(): JSX.Element {
         <div className={clsx("col col--6", styles.item__inner)}>
           <div>
             <h1 className={clsx("margin-bottom--md", styles.item__title)}>
-              Fastest Build System <span>Powered by Nx</span>
+              最快的构建系统 <span>由Nx提供</span>
             </h1>
             <p className="margin-bottom--md">
-              Lerna runs a command against any number of projects in the most efficient way, in the right
-              order, in parallel, using advanced caching and with the possibility to distribute that on
-              multiple machines.
+              Lerna以最有效的方式，以正确的顺序，并行地对任意数量的项目运行命令，使用高级缓存，并有可能将其分布在多台机器上。
             </p>
             <a className="button button--secondary" href="/docs/features/run-tasks">
-              Running Tasks
+              运行的任务
             </a>
           </div>
         </div>

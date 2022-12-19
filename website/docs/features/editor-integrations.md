@@ -27,5 +27,5 @@ Nx 控制台在 VS Code 侧栏中显示所有项目的 npm 脚本，并允许你
 
 ![Nx Console logo](../images/nx-console/nx-console-logo.png)
 
-- [Install from the VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
-- [Contribute on GitHub](https://github.com/nrwl/nx-console)
+- [从VSCode市场安装](https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console)
+- [在GitHub上投稿](https://github.com/nrwl/nx-console)

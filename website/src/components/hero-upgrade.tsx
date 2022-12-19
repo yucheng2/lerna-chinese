@@ -34,19 +34,17 @@ export default function HeroUpgrade(): JSX.Element {
           <div className="col col--7 margin-vert--xl">
             <h1 className={styles.slogan}>
               <span>
-                <span className={styles.slogan__highlight}>Upgrade</span> your
+                <span className={styles.slogan__highlight}>升级</span> 你的
               </span>
               <span>Lerna experience</span>
             </h1>
             <p className={styles.description}>
-              Don't miss out on the latest features: local caching by default, remote distribution, task
-              pipelines, PNPM support, dynamic terminal output, Prettier support, "lerna repair" command and
-              more.
+              不要错过最新的特性:默认的本地缓存，远程分布，任务管道，PNPM支持，动态终端输出，更漂亮的支持，“lerna修复”命令等等。
             </p>
             <p className={styles.description}>
-              Read more in our{" "}
+              阅读我们的{" "}
               <a href="https://dev.to/nx/upgrade-your-lerna-workspace-make-it-fast-and-modern-3c0g">
-                blog post.
+                博客文章。
               </a>
             </p>
           </div>
@@ -60,7 +58,7 @@ export default function HeroUpgrade(): JSX.Element {
                     stroke="currentColor"
                     aria-hidden="true"
                   />{" "}
-                  Upgrade
+                  升级
                 </h3>
                 <CopyToClipboard
                   text={upgradeCommand}
@@ -83,8 +81,7 @@ export default function HeroUpgrade(): JSX.Element {
               </div>
               <div className={styles.commands_container}>
                 <h3>
-                  <CogIcon className={styles.commands_icon} stroke="currentColor" aria-hidden="true" /> Add
-                  caching
+                  <CogIcon className={styles.commands_icon} stroke="currentColor" aria-hidden="true" /> 添加缓存
                 </h3>
                 <CopyToClipboard
                   text={cachingCommand}
@@ -106,10 +103,9 @@ export default function HeroUpgrade(): JSX.Element {
                 </CopyToClipboard>
               </div>
               <div className={styles.reaching_out}>
-                <h4>Stuck? Need some help?</h4>
+                <h4>卡住了吗?需要帮助吗?</h4>
                 <p>
-                  Reach out to us! We help open source respositories with their upgrade to make sure they get
-                  most out of their Lerna setup.
+                 向我们伸出援手!我们帮助开源存储库进行升级，以确保它们最大限度地利用Lerna设置。
                 </p>
                 <div className={styles.reaching_out__link_container}>
                   <a href="https://go.nrwl.io/join-slack?utm_source=lerna.js.org" target="_blank">

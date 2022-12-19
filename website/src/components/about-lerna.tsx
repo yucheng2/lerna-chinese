@@ -114,15 +114,13 @@ export default function AboutLerna(): JSX.Element {
       <div className={clsx("row margin-bottom--xl", styles.hero)}>
         <div className="col col--8">
           <div>
-            <h1 className={clsx("margin-bottom--lg", styles.hero__title)}>Why Lerna?</h1>
+            <h1 className={clsx("margin-bottom--lg", styles.hero__title)}>为什么是Lerna?</h1>
             <p className={clsx("margin-bottom--md", styles.hero__text)}>
-              Monorepos let you develop multiple packages in the same repository, which is fantastic for
-              productivity. You can share code, establish clear ownership, and have fast unified CI. That is
-              why more and more teams are switching to this way of development.
+              Monorepos允许您在同一个存储库中开发多个包，这对于提高工作效率非常棒。您可以共享代码，建立明确的所有权，并拥有快速统一的CI。这就是为什么越来越多的团队转向这种开发方式.
             </p>
             <p className={clsx("margin-bottom--md", styles.hero__text)}>
-              To use monorepos well, you need a good monorepo tool, and Lerna is exactly that. Lerna is{" "}
-              <a href="https://github.com/vsavkin/large-monorepo">fast</a>, widely used, and battle tested.
+              要想很好地使用monorepos，你需要一个好的monorepos工具，Lerna正是这样一个工具。 Lerna 是{" "}
+              <a href="https://github.com/vsavkin/large-monorepo">快的</a>, 广泛使用，并经过实战检验。
             </p>
           </div>
         </div>

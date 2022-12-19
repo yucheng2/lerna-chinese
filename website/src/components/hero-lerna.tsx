@@ -41,13 +41,12 @@ export default function HeroLerna(): JSX.Element {
               <span className={styles.slogan__highlight}>JavaScript Monorepos</span>
             </h1>
             <p className={styles.description}>
-              Lerna is a fast modern build system for managing and publishing multiple JavaScript/TypeScript
-              packages from the same repository.
+              Lerna是一个快速的现代构建系统，用于管理和发布来自同一个存储库的多个JavaScriptTypeScript包。
             </p>
             <div className="padding-vert--md row">
               <div className="col col--5">
                 <a href="/docs/getting-started" className="button button--lg button--block button--primary">
-                  Get Started
+                  开始
                 </a>
               </div>
               <div className="col col--5">

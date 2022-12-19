@@ -6,16 +6,16 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Lerna",
-  tagline: "Original Monorepo Tool",
-  url: "https://yucheng2.github.io",
+  title: "Lerna中文翻译",
+  tagline: "Lerna中文翻译",
+  // url: "https://yucheng2.github.io",
+  url: "http://yuchengfan.top:3001",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "images/favicon.ico",
   organizationName: "yucheng2",
-  projectName: "yucheng2.github.io/lerna-chinese",
-  deploymentBranch: "gh-pages",
+  projectName: "lerna-chinese",
   trailingSlash: false,
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -105,15 +105,15 @@ const config = {
             type: "doc",
             docId: "introduction",
             position: "left",
-            label: "Docs",
+            label: "文档",
           },
           {
             type: "doc",
             docId: "getting-started",
             position: "left",
-            label: "Get Started",
+            label: "开始",
           },
-          { to: "/upgrade", label: "Upgrade", position: "left" },
+          { to: "/upgrade", label: "升级", position: "left" },
           // {
           //   href: "https://nx.dev",
           //   className: "header-nxdev-link",
@@ -138,10 +138,6 @@ const config = {
           //   title: "Check Nrwl",
           //   label: "Nrwl",
           // },
-          {
-            type: 'localeDropdown',
-            position: "right",
-          },
           {
             href: "https://github.com/lerna/lerna",
             className: "header-github-link",

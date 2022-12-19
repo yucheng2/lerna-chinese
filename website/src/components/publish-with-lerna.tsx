@@ -8,13 +8,12 @@ export default function PublishWithLerna(): JSX.Element {
       <div className={clsx("row row--no-gutters shadow--md", styles.item)}>
         <div className={clsx("col col--6", styles.item__inner)}>
           <div>
-            <h1 className="margin-bottom--md">Ultimate Tool for Publishing Packages</h1>
+            <h1 className="margin-bottom--md">发布包的终极工具</h1>
             <p className="margin-bottom--md">
-              Lerna is the ultimate tool for publishing multiple packages to npm. Whether the packages have
-              independent versions or not, Lerna's got you covered.
+              Lerna是将多个包发布到npm的终极工具。无论软件包是否有独立版本，Lerna都能满足您的需求。
             </p>
             <a className="button button--secondary" href="/docs/features/version-and-publish">
-              Publishing Packages
+              发布包
             </a>
           </div>
         </div>

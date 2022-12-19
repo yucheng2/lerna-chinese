@@ -13,8 +13,8 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title="Documentation"
-      description="Lerna is a fast modern build system for managing and publishing multiple JavaScript/TypeScript packages from the same repository."
+      title="文档"
+      description="Lerna是一个快速的现代构建系统，用于管理和发布来自同一个存储库的多个JavaScriptTypeScript包。"
     >
       <main>
         <HeroLerna />

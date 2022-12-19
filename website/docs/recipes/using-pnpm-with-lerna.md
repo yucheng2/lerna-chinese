@@ -1,15 +1,15 @@
 # Lerna中使用pnpm
 
-Lerna can be used in a [`pnpm` workspace](https://pnpm.io/workspaces) to get the full benefits of both [`pnpm`](https://pnpm.io) and Lerna.
+Lerna可以在 [`pnpm`工作空间](https://pnpm.io/workspaces) 中使用，以获得 [`pnpm`](https://pnpm.io) 和Lerna的全部好处。
 
-When used in a `pnpm` workspace, Lerna will:
+当在`pnpm`工作空间中使用时，Lerna将:
 
-- resolve package locations with `pnpm-workspace.yaml` (https://pnpm.io/workspaces)
-- enforce `useWorkspaces: true` in `lerna.json` (and ignore `packages:` in `package.json`).
-- block usage of `bootstrap`, `link`, and `add` commands. Instead, you should use `pnpm` commands directly to manage dependencies (https://pnpm.io/cli/install).
-- respect the [workspace protocol](https://pnpm.io/workspaces#workspace-protocol-workspace) for package dependencies.
-  - During `lerna version`, dependencies will be updated as normal, but will preserve the `workspace:` prefix if it exists.
-  - If a [workspace alias](https://pnpm.io/workspaces#referencing-workspace-packages-through-aliases) is used, then `lerna version` will not bump the version of the dependency, since aliases don't specify a version number to bump.
+- 使用[`pnpm-workspace.yaml`](https://pnpm.io/workspaces)解析包的位置
+- 在 `lerna.json` 设置 `useWorkspaces: true` ( 并且在`package.json`忽略 `packages:`).
+- 不要使用`bootstrap`, `link`, 和 `add`的命令。您应该直接使用 `pnpm`命令来管理依赖项(https://pnpm.io/cli/install)
+- for package dependencies.尊重包依赖关系的[工作空间协议](https://pnpm.io/workspaces#workspace-protocol-workspace)。
+  - 在`lerna version`期间，依赖项将正常更新，但将保留 `workspace:`前缀(如果它存在)。
+  - If a [workspace alias](https://pnpm.io/workspaces#referencing-workspace-packages-through-aliases) is used, then `lerna version` will not bump the version of the dependency, since aliases don't specify a version number to bump. (如果使用了[工作区别名](https://pnpm.io/workspaces#referencing-workspace-packages-through-aliases)，那么 `lerna version`将不会碰撞依赖项的版本，因为别名没有指定要碰撞的版本号)
 
 ## Getting Started
 
